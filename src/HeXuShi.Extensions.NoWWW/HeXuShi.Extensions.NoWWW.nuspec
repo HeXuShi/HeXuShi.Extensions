@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>HeXuShi.Extensions.NoWWW</id>
+    <version>1.0.0</version>
+    <title>$title$</title>
+    <authors>Minzhang He</authors>
+    <owners>Minzhang He/owners>
+    <licenseUrl>http://opensource.org/licenses/MS-PL</licenseUrl>
+    <projectUrl>https://github.com/HeXuShi/HeXuShi.Extensions</projectUrl>
+    <iconUrl>https://hexushi.blob.core.windows.net/hexushi/35529176.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>change www.site.com to site.com</description>
+    <releaseNotes>Create project</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>web http www Middleware</tags>
+  </metadata>
+</package>

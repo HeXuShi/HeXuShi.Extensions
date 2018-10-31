@@ -1,0 +1,12 @@
+#################
+#Su9.VIP Web App#
+#################
+.vs/
+src/.vs/
+src/HeXuShi.Extensions.NoWWW/bin/
+src/HeXuShi.Extensions.NoWWW/obj/
+
+*.user
+*.suo
+*.cache
+.vscode
