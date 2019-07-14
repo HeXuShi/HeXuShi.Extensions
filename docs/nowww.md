@@ -1,5 +1,6 @@
 # HeXuShi.Extensions.NoWWW
-[nuget](https://www.nuget.org/packages/HeXuShi.Extensions.NoWWW/)
+[nuget install](https://www.nuget.org/packages/HeXuShi.Extensions.NoWWW/)
+
 change www.site.com to site.com in asp.net core web app.
 
 ```csharp
@@ -18,10 +19,15 @@ public class Startup
 ```
 
 # HeXuShi.Extensions.NoWWW preview
+
 > warning, this is preview
+
 how install dependencies?
+
 [Http.Abstractions](https://dotnet.myget.org/feed/aspnetcore-dev/package/nuget/Microsoft.AspNetCore.Http.Abstractions)
+
 [Http.Extensions](https://dotnet.myget.org/feed/aspnetcore-dev/package/nuget/Microsoft.AspNetCore.Http.Extensions)
+
 [Mvc.Abstractions](https://dotnet.myget.org/feed/aspnetcore-dev/package/nuget/Microsoft.AspNetCore.Mvc.Abstractions)
 
 ```
