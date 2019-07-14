@@ -5,24 +5,34 @@
     <PackageIconUrl>https://hexushi.blob.core.windows.net/hexushi/35529176.jpg</PackageIconUrl>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/HeXuShi/HeXuShi.Extensions</PackageProjectUrl>
-    <Description>change www.site.com to site.com in asp.net core web app.</Description>
+    <Description>change www.site.com to site.com in asp.net core web app.
+how to:
+https://github.com/HeXuShi/HeXuShi.Extensions/blob/master/docs/nowww.md</Description>
     <Copyright>Copyright 2019</Copyright>
     <RepositoryUrl>https://github.com/HeXuShi/HeXuShi.Extensions</RepositoryUrl>
     <RepositoryType>open source</RepositoryType>
     <PackageTags>web http www Middleware</PackageTags>
-    <PackageReleaseNotes>Create project</PackageReleaseNotes>
+    <PackageReleaseNotes>add licensing</PackageReleaseNotes>
     <Authors>HeXuShi</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>killsb.pfx</AssemblyOriginatorKeyFile>
-    <PackageLicenseExpression>https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt</PackageLicenseExpression>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
