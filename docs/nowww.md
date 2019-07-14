@@ -30,6 +30,8 @@ how install dependencies?
 
 [Mvc.Abstractions](https://dotnet.myget.org/feed/aspnetcore-dev/package/nuget/Microsoft.AspNetCore.Mvc.Abstractions)
 
+like this:
+
 ```
-PM> Install-Package Microsoft.AspNetCore.Mvc.Abstractions -Version 3.0.0-preview4-19123-01 -Source https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json
+PM> Install-Package Microsoft.AspNetCore.Mvc.Abxxxxxxxxx -Version xxxxxxxxxxxxx-01 -Source https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json
 ```
