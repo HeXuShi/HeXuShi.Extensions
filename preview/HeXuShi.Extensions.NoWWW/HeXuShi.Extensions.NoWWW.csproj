@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <PackageIconUrl>https://hexushi.blob.core.windows.net/hexushi/35529176.jpg</PackageIconUrl>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/HeXuShi/HeXuShi.Extensions</PackageProjectUrl>
@@ -15,7 +14,7 @@ https://github.com/HeXuShi/HeXuShi.Extensions/blob/master/docs/nowww.md</Descrip
     <PackageReleaseNotes>add licensing</PackageReleaseNotes>
     <Authors>HeXuShi</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.2.0</Version>
+    <Version>3.0.0-preview1</Version>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>killsb.pfx</AssemblyOriginatorKeyFile>
     <PackageLicenseExpression></PackageLicenseExpression>
@@ -23,16 +22,16 @@ https://github.com/HeXuShi/HeXuShi.Extensions/blob/master/docs/nowww.md</Descrip
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="..\..\LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="3.0.0-preview4-19123-01" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="3.0.0-preview4-19123-01" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="3.0.0-preview4-19123-01" />
   </ItemGroup>
 
 </Project>

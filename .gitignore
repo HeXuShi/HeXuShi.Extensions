@@ -10,3 +10,5 @@ src/HeXuShi.Extensions.NoWWW/obj/
 *.suo
 *.cache
 .vscode
+/preview/HeXuShi.Extensions.NoWWW/bin
+/preview/HeXuShi.Extensions.NoWWW/obj
