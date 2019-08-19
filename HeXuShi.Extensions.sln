@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28218.60
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{04C20E46-920C-4384-B57E-0D9EA3FFDBA5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeXuShi.Extensions.NoWWW", "src\HeXuShi.Extensions.NoWWW\HeXuShi.Extensions.NoWWW.csproj", "{00D4953B-9C7C-452C-9A72-83672C027CDE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeXuShi.Extensions.JumpToCN", "src\HeXuShi.Extensions.JumpToCN\HeXuShi.Extensions.JumpToCN.csproj", "{05B3E5E8-578B-41EE-8705-1824DA780445}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +19,17 @@ Global
 		{00D4953B-9C7C-452C-9A72-83672C027CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00D4953B-9C7C-452C-9A72-83672C027CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00D4953B-9C7C-452C-9A72-83672C027CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B3E5E8-578B-41EE-8705-1824DA780445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B3E5E8-578B-41EE-8705-1824DA780445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B3E5E8-578B-41EE-8705-1824DA780445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B3E5E8-578B-41EE-8705-1824DA780445}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{00D4953B-9C7C-452C-9A72-83672C027CDE} = {04C20E46-920C-4384-B57E-0D9EA3FFDBA5}
+		{05B3E5E8-578B-41EE-8705-1824DA780445} = {04C20E46-920C-4384-B57E-0D9EA3FFDBA5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61188532-DD54-4567-B8AD-E0B697DFB6F3}

@@ -1,26 +1,3 @@
-# HeXuShi.Extensions
-
-
-# HeXuShi.Extensions.NoWWW
-[nuget install](https://www.nuget.org/packages/HeXuShi.Extensions.NoWWW/)
-
-change www.site.com to site.com in asp.net core web app.
-
-```csharp
-using HeXuShi.Extensions;
-
-public class Startup
-{
-    ...
-    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-    {
-        ...
-        app.UseNoWWW();
-        ...
-    }
-}
-```
-
 # HeXuShi.Extensions.JumpToCN
 [nuget install](https://www.nuget.org/packages/HeXuShi.Extensions.JumpToCN/)
 
@@ -79,4 +56,3 @@ When you use China mainland ip access, you will be redirected to the .cn suffix 
 third state:
 
 The current region is not found, the query module has an exception, such as the db file is not installed.the current suffix domain name will be maintained.
-
