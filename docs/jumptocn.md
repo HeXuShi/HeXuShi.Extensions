@@ -45,13 +45,13 @@ public class Startup
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
         ...
-        app.JumpToCN(".com"); // or app.JumpToCN(".anything");
+        app.JumpToCN(".com");
         ...
     }
 }
 ```
 
-When you use China mainland ip access, you will be redirected to the .cn suffix domain name. If it is a non-Chinese mainland ip access, use no .com (or .anything) suffix domain name to access, it will jump to the specified .com (or .anything) suffix domain name.
+When you use China mainland ip access, you will be redirected to the .cn suffix domain name. If it is a non-Chinese mainland ip access, use the .cn suffix domain name to access, it will jump to the specified .com suffix domain name.
 
 third state:
 
