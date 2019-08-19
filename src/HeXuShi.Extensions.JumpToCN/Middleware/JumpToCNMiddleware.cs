@@ -35,7 +35,7 @@ namespace HeXuShi.Extensions.Middleware
 
             string cnSuffix = ".cn";
             var suffix = context.Request.Host.Value.Substring(index);
-            if(_noCNSuffix == "" && suffix == cnSuffix)
+            if(_noCNSuffix == string.Empty && suffix == cnSuffix)
                 return _next(context);
 
             HostString newHost;
@@ -49,7 +49,7 @@ namespace HeXuShi.Extensions.Middleware
                     {
                         newHost = new HostString(context.Request.Host.Value.Replace(suffix, cnSuffix));
                     }
-                    else if(suffix != _noCNSuffix && !isChinaIp  && _noCNSuffix != "")
+                    else if(suffix != _noCNSuffix && !isChinaIp  && _noCNSuffix != string.Empty)
                     {
                         newHost = new HostString(context.Request.Host.Value.Replace(suffix, _noCNSuffix));
                     }

@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeXuShi.Extensions.NoWWW", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeXuShi.Extensions.JumpToCN", "src\HeXuShi.Extensions.JumpToCN\HeXuShi.Extensions.JumpToCN.csproj", "{05B3E5E8-578B-41EE-8705-1824DA780445}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{3419470D-747C-494D-9202-CFFAD35A0726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSample", "sample\WebSample\WebSample.csproj", "{34111E15-D3C6-4530-8718-DDD9563B77A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,10 @@ Global
 		{05B3E5E8-578B-41EE-8705-1824DA780445}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05B3E5E8-578B-41EE-8705-1824DA780445}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05B3E5E8-578B-41EE-8705-1824DA780445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34111E15-D3C6-4530-8718-DDD9563B77A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34111E15-D3C6-4530-8718-DDD9563B77A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34111E15-D3C6-4530-8718-DDD9563B77A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34111E15-D3C6-4530-8718-DDD9563B77A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{00D4953B-9C7C-452C-9A72-83672C027CDE} = {04C20E46-920C-4384-B57E-0D9EA3FFDBA5}
 		{05B3E5E8-578B-41EE-8705-1824DA780445} = {04C20E46-920C-4384-B57E-0D9EA3FFDBA5}
+		{34111E15-D3C6-4530-8718-DDD9563B77A2} = {3419470D-747C-494D-9202-CFFAD35A0726}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61188532-DD54-4567-B8AD-E0B697DFB6F3}
