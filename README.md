@@ -35,6 +35,7 @@ Console.WriteLine("ipv6 test:" + IsChinaIp.VerifyIPv6("2400:da00::6666"));
 
 [run test result](https://github.com/HeXuShi/HeXuShi.Extensions/blob/master/isChinaIp_runTestResult.md) :
 
+```powershell
 49) ipv4 test:True
 runTime:00:00:00.1628871
 49) ipv6 test:True
@@ -65,6 +66,7 @@ runTime:00:00:00.0007299
 runTime:00:00:00.0001387
 42) ipv4 test:True
 runTime:00:00:00.0006187
+```
 
 # HeXuShi.Extensions.JumpToCN
 [nuget install](https://www.nuget.org/packages/HeXuShi.Extensions.JumpToCN/)
