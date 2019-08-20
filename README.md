@@ -81,8 +81,6 @@ This project will run into 3 states:
 
 first state:
 
-After installing the db(ip2region.db) file, 
-
 ```csharp
 using HeXuShi.Extensions;
 
@@ -102,7 +100,6 @@ When you use China mainland ip access, you will be redirected to the .cn suffix 
 
 second state:
 
-After installing the db(ip2region.db) file, 
 
 ```csharp
 using HeXuShi.Extensions;
