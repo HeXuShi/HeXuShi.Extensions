@@ -3,7 +3,7 @@ https://github.com/HeXuShi/HeXuShi.Extensions/tree/master/sample/TestChinaIp
 
 Hello World!
 
-```
+```powershell
 49) ipv4 test:True
 runTime:00:00:00.1628871
 49) ipv6 test:True
