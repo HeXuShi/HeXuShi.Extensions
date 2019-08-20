@@ -21,16 +21,26 @@ public class Startup
 }
 ```
 
+# HeXuShi.Extensions.IsChinaIp
+
+[nuget install](https://www.nuget.org/packages/HeXuShi.Extensions.IsChinaIp/)
+
+[Use example](https://github.com/HeXuShi/HeXuShi.Extensions/blob/master/sample/TestChinaIp/Program.cs)
+
+```csharp
+IsChinaIp.Setup();//Setup can be called multiple times, but only on the first initialization
+Console.WriteLine("ipv4 test:" + IsChinaIp.VerifyIPv4("183.192.62.65"));
+Console.WriteLine("ipv6 test:" + IsChinaIp.VerifyIPv6("2400:da00::6666"));
+```
+
 # HeXuShi.Extensions.JumpToCN
 [nuget install](https://www.nuget.org/packages/HeXuShi.Extensions.JumpToCN/)
 
 change xx.com or xx.anything to xx.cn,help you jump to cn(china) domain suffix.
 
-https://github.com/lionsoul2014/ip2region/ Based on this open source project
+No longer based on this project https://github.com/lionsoul2014/ip2region/, But still very grateful lionsoul2014
 
-Before you start everything, please create db folder in your web project wwwroot folder.
-
-and download https://github.com/lionsoul2014/ip2region/blob/master/data/ip2region.db, to you web project wwwroot/db/ip2region.db
+Because we only need to simply query Chinese ip, so we don't need to pre-install any project files (such as db files).
 
 This project will run into 3 states:
 

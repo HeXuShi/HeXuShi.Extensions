@@ -3,11 +3,10 @@
 
 change xx.com or xx.anything to xx.cn,help you jump to cn(china) domain suffix.
 
-https://github.com/lionsoul2014/ip2region/ Based on this open source project
+No longer based on this project https://github.com/lionsoul2014/ip2region/
 
-Before you start everything, please create db folder in your web project wwwroot folder.
+Because we only need to simply query Chinese ip, so we don't need to pre-install any project files (such as db files).
 
-and download https://github.com/lionsoul2014/ip2region/blob/master/data/ip2region.db, to you web project wwwroot/db/ip2region.db
 
 This project will run into 3 states:
 

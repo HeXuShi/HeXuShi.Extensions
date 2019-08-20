@@ -40,27 +40,35 @@ namespace HeXuShi.Extensions.Middleware
 
             string cnSuffix = ".cn";
             var suffix = context.Request.Host.Value.Substring(index);
-            if(_noCNSuffix == string.Empty && suffix == cnSuffix)
+            if (_noCNSuffix == string.Empty && suffix == cnSuffix)
                 return _next(context);
 
             HostString newHost;
             try
             {
-                using (var _search = new DbSearcher(_webRootPath + @"\db\ip2region.db"))
+                IsChinaIp.Setup();
+                bool isChinaIp = false;
+                switch (context.Connection.RemoteIpAddress.AddressFamily)
                 {
-                    var region = _search.MemorySearch(context.Connection.RemoteIpAddress.ToString()).Region;
-                    var isChinaIp = region.StartsWith("中国|");
-                    if (suffix != cnSuffix && isChinaIp)
-                    {
-                        newHost = changeDomainSuffix(context.Request.Host.Value, index, cnSuffix);
-                    }
-                    else if(suffix != _noCNSuffix && !isChinaIp  && _noCNSuffix != string.Empty)
-                    {
-                        newHost = changeDomainSuffix(context.Request.Host.Value, index, _noCNSuffix);
-                    }
-                    else
-                       return _next(context);
+                    case System.Net.Sockets.AddressFamily.InterNetwork:
+                        isChinaIp = IsChinaIp.VerifyIPv4(context.Connection.RemoteIpAddress.ToString());
+                        break;
+                    case System.Net.Sockets.AddressFamily.InterNetworkV6:
+                        isChinaIp = IsChinaIp.VerifyIPv6(context.Connection.RemoteIpAddress.ToString());
+                        break;
+                    default:
+                        return _next(context);
                 }
+                if (suffix != cnSuffix && isChinaIp)
+                {
+                    newHost = changeDomainSuffix(context.Request.Host.Value, index, cnSuffix);
+                }
+                else if (suffix != _noCNSuffix && !isChinaIp && _noCNSuffix != string.Empty)
+                {
+                    newHost = changeDomainSuffix(context.Request.Host.Value, index, _noCNSuffix);
+                }
+                else
+                    return _next(context);
             }
             catch
             {
