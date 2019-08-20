@@ -27,6 +27,11 @@ namespace HeXuShi.Extensions.Middleware
             _webRootPath = _hostingEnvironment.WebRootPath;
             _noCNSuffix = noCNSuffix;
         }
+        public HostString changeDomainSuffix(string domain, int index, string newSuffix)
+        {
+            domain = domain.Remove(index, domain.Length - index);
+            return new HostString(domain + newSuffix);
+        }
         public Task Invoke(HttpContext context)
         {
             var index = context.Request.Host.Value.LastIndexOf(".");
@@ -47,11 +52,11 @@ namespace HeXuShi.Extensions.Middleware
                     var isChinaIp = region.StartsWith("中国|");
                     if (suffix != cnSuffix && isChinaIp)
                     {
-                        newHost = new HostString(context.Request.Host.Value.Replace(suffix, cnSuffix));
+                        newHost = changeDomainSuffix(context.Request.Host.Value, index, cnSuffix);
                     }
                     else if(suffix != _noCNSuffix && !isChinaIp  && _noCNSuffix != string.Empty)
                     {
-                        newHost = new HostString(context.Request.Host.Value.Replace(suffix, _noCNSuffix));
+                        newHost = changeDomainSuffix(context.Request.Host.Value, index, _noCNSuffix);
                     }
                     else
                        return _next(context);
