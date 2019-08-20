@@ -4,7 +4,13 @@ using System.Linq;
 using System.IO;
 using System.Threading.Tasks;
 using System.Net;
+/*
+ IP2Location™ LITE IP-COUNTRY Database
+https://lite.ip2location.com/database/ip-country
 
+download link:
+https://download.ip2location.com/lite/
+*/
 namespace IpSearchDemo
 {
     public class IPAdressRange
@@ -25,6 +31,13 @@ namespace IpSearchDemo
             Console.WriteLine("Hello World!");
             ReadDataBase().Wait();
         }
+        /*
+         IP2Location™ LITE IP-COUNTRY Database
+        https://lite.ip2location.com/database/ip-country
+
+        download link:
+        https://download.ip2location.com/lite/
+       */
         static async Task ReadDataBase()
         {
             const string ipv4File = "IP2LOCATION-LITE-DB1.CSV";
