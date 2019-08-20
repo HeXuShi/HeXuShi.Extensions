@@ -77,6 +77,19 @@ No longer based on this project https://github.com/lionsoul2014/ip2region/, But 
 
 Because we only need to simply query Chinese ip, so we don't need to pre-install any project files (such as db files).
 
+[run test result](https://github.com/HeXuShi/HeXuShi.Extensions/blob/master/isChinaIp_runTestResult.md) :
+
+```powershell
+49) ipv4 test:True
+runTime:00:00:00.1628871
+49) ipv6 test:True
+runTime:00:00:00.0010261
+48) ipv4 test:True
+runTime:00:00:00.0006312
+48) ipv6 test:True
+runTime:00:00:00.0001385
+```
+
 This project will run into 3 states:
 
 first state:
