@@ -5,27 +5,20 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Net;
 /*
- IP2Location™ LITE IP-COUNTRY Database
-https://lite.ip2location.com/database/ip-country
-
-download link:
-https://download.ip2location.com/lite/
-*/
+compare IP address range in C#?
+https://stackoverflow.com/questions/10525531/how-to-compare-ip-address-range-in-c
+ */
 namespace IpSearchDemo
 {
-    public class IPAdressRange
+    public class IpRange
     {
-        public string Min { get; set; }
-        public string Max { get; set; }
-    }
-    public class IpAddressByte
-    {
-        public ulong Min { get; set; }
-        public ulong Max { get; set; }
+        public string Address { get; set; }
+        public int PrefixLength { get; set; }
     }
     class Program
     {
-        static List<IpAddressByte> ipv4Ranges = new List<IpAddressByte>();
+        static List<IpRange> ipv4Ranges = new List<IpRange>();
+        static List<IpRange> ipv6Ranges = new List<IpRange>();
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -40,8 +33,8 @@ namespace IpSearchDemo
        */
         static async Task ReadDataBase()
         {
-            const string ipv4File = "IP2LOCATION-LITE-DB1.CSV";
-            const string ipv6File = "IP2LOCATION-LITE-DB1.IPV6.CSV";
+            const string ipv4File = "ipv4.cn.zone.txt";
+            const string ipv6File = "ipv6.cn.zone.txt";
             string ipv4Text;
             string ipv6Text;
             using (var file = File.OpenText(ipv4File))
@@ -52,66 +45,105 @@ namespace IpSearchDemo
             {
                 ipv6Text = await file.ReadToEndAsync();
             }
-            readIpv4Range(ipv4Text);
-            readIpv6Range(ipv6Text);
-            Console.WriteLine("is china ip ?" + TestIpv4());
+           readIpv4Range(ipv4Text);
+           readIpv6Range(ipv6Text);
+            var startTime = DateTime.UtcNow;
+           Console.WriteLine("is china ipv4 ip ?" + TestIpv4(ipv4Ranges));
+           Console.WriteLine("runTime:" +  (DateTime.UtcNow - startTime));
+          startTime = DateTime.UtcNow;
+           Console.WriteLine("is china ipv6 ip ?" + TestIpv6(ipv6Ranges));
+            Console.WriteLine("runTime:" +  (DateTime.UtcNow - startTime));
         }
-        static bool TestIpv4()
+        static bool TestIpv4(List<IpRange> ipRanges)
         {
-            string testIpv4Address = "183.192.62.65";
-            var addressByte = Ipv4ToByte(testIpv4Address);
-            foreach(var item in ipv4Ranges)
+            string address = "183.192.62.65";
+            var addressByte = IPAddress.Parse(address).GetAddressBytes();
+            foreach (var item in ipRanges)
             {
-                if (addressByte >= item.Min && addressByte <= item.Max)
+                var rangeByte = IPAddress.Parse(item.Address).GetAddressBytes();
+                if (CompareIp(rangeByte, item.PrefixLength, addressByte))
                     return true;
             }
             return false;
         }
-        static ulong Ipv4ToByte(string ip)
+        static bool TestIpv6(List<IpRange> ipRanges)
         {
-            return BitConverter.ToUInt32(IPAddress.Parse(ip).GetAddressBytes().Reverse().ToArray(), 0);
+            string address = "2400:da00::6666";
+            var addressByte = IPAddress.Parse(address).GetAddressBytes();
+            foreach (var item in ipRanges)
+            {
+                var rangeByte = IPAddress.Parse(item.Address).GetAddressBytes();
+                if (CompareIp(rangeByte, item.PrefixLength, addressByte))
+                    return true;
+            }
+            return false;
+        }
+        static byte[] IpToByte(string ip)
+        {
+            return IPAddress.Parse(ip).GetAddressBytes();
+            //return BitConverter.ToUInt32(IPAddress.Parse(ip).GetAddressBytes().Reverse().ToArray(), 0);
+        }
+        public static bool CompareIp(byte[] addressRange, int prefixLength, byte[] address)
+        {
+            if (address == null)
+                throw new ArgumentNullException("address");
+
+            if (address.Length != addressRange.Length)
+                return false; // IPv4/IPv6 mismatch
+
+            int index = 0;
+            int bits = prefixLength;
+
+            for (; bits >= 8; bits -= 8)
+            {
+                if (address[index] != addressRange[index])
+                    return false;
+                ++index;
+            }
+
+            if (bits > 0)
+            {
+                int mask = (byte)~(255 >> bits);
+                if ((address[index] & mask) != (addressRange[index] & mask))
+                    return false;
+            }
+            return true;
         }
         static void readIpv4Range(string text)
         {
-            //List<IPAdressRange> ipRanges = new List<IPAdressRange>();
-            var table = text.Split("\r\n");
-
+            var table = text.Split('\n');
             foreach (var item in table)
-           {
-            if (item.Length < 5)
-                   continue;
-            var keyVal = item.Split(',');
-             if (keyVal.Length < 4)
-                  throw new InvalidOperationException("ipv4 error ip range");
-
-             if(keyVal[2] == "\"CN\"")
-             {
-                    var rangeBytes = new IpAddressByte();
-                    rangeBytes.Min = Convert.ToUInt32(keyVal[0].Replace("\"", ""));
-                    rangeBytes.Max = Convert.ToUInt32(keyVal[1].Replace("\"", ""));
-                    ipv4Ranges.Add(rangeBytes);
-                }
-            //    var ipRange = new IPAdressRange
-            //    {
-            //        Min = keyVal[0]
-            //    };
-            //    var maxIp = keyVal[0];
-            //    var index = maxIp.LastIndexOf(".");
-            //    maxIp = maxIp.Remove(index, maxIp.Length - index);
-            //    ipRange.Max = maxIp + "." + keyVal[1];
-            //    ipRanges.Add(ipRange);
-           }
-            //foreach(var item in ipRanges)
-            //{
-            //    var rangeBytes = new IpAddressByte();
-            //    rangeBytes.Min = Ipv4ToByte(item.Min);
-            //    rangeBytes.Max = Ipv4ToByte(item.Max);
-            //    ipv4Ranges.Add(rangeBytes);
-            //}
+            {
+                if (item.Length < 5)
+                    continue;
+                var keyVal = item.Split('/');
+                if (keyVal.Length != 2)
+                    throw new InvalidOperationException("ipv4 error ip range");
+                var ipRange = new IpRange
+                {
+                     Address = keyVal[0],
+                     PrefixLength = Convert.ToInt32(keyVal[1])
+                };
+                ipv4Ranges.Add(ipRange);
+            }
         }
         static void readIpv6Range(string text)
         {
-            List<IPAdressRange> ipRanges = new List<IPAdressRange>();
+            var table = text.Split('\n');
+            foreach (var item in table)
+            {
+                if (item.Length < 5)
+                    continue;
+                var keyVal = item.Split('/');
+                if (keyVal.Length != 2)
+                    throw new InvalidOperationException("ipv6 error ip range");
+                var ipRange = new IpRange
+                {
+                    Address = keyVal[0],
+                    PrefixLength = Convert.ToInt32(keyVal[1])
+                };
+                ipv6Ranges.Add(ipRange);
+            }
         }
     }
 }
