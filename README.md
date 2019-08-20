@@ -120,5 +120,5 @@ When you use China mainland ip access, you will be redirected to the .cn suffix 
 
 third state:
 
-The current region is not found, the query module has an exception, such as the db file is not installed.the current suffix domain name will be maintained.
+The current region is not found, the query module has an exception.the current suffix domain name will be maintained.
 
