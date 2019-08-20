@@ -20,6 +20,8 @@ public class Startup
 
 # HeXuShi.Extensions.NoWWW preview
 
+change www.site.com to site.com in asp.net core web app.
+
 > warning, this is preview
 
 how install dependencies?
