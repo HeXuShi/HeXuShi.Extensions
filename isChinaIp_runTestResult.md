@@ -2,6 +2,8 @@ Use this example to test:
 https://github.com/HeXuShi/HeXuShi.Extensions/tree/master/sample/TestChinaIp
 
 Hello World!
+
+```
 49) ipv4 test:True
 runTime:00:00:00.1628871
 49) ipv6 test:True
@@ -202,3 +204,4 @@ runTime:00:00:00.0004669
 runTime:00:00:00.0005319
 0) ipv6 test:True
 runTime:00:00:00.0014869
+```
