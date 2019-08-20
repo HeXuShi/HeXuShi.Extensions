@@ -4,6 +4,7 @@ using System.Linq;
 using System.IO;
 using System.Threading.Tasks;
 using System.Net;
+using Newtonsoft.Json;
 /*
 compare IP address range in C#?
 https://stackoverflow.com/questions/10525531/how-to-compare-ip-address-range-in-c
@@ -41,14 +42,37 @@ namespace IpSearchDemo
             {
                 ipv6Text = await file.ReadToEndAsync();
             }
-           readIpv4Range(ipv4Text);
-           readIpv6Range(ipv6Text);
+            readIpv4Range(ipv4Text);
+            readIpv6Range(ipv6Text);
+            await SaveIpRange(ipv4Ranges, "ipv4.cn.zone.json");
+            await SaveIpRange(ipv6Ranges, "ipv6.cn.zone.json");
+            ipv4Ranges = await ReadIpRange("ipv4.cn.zone.json");
+            ipv6Ranges = await ReadIpRange("ipv6.cn.zone.json");
             var startTime = DateTime.UtcNow;
-           Console.WriteLine("is china ipv4 ip ?" + TestIpv4(ipv4Ranges));
-           Console.WriteLine("runTime:" +  (DateTime.UtcNow - startTime));
-          startTime = DateTime.UtcNow;
-           Console.WriteLine("is china ipv6 ip ?" + TestIpv6(ipv6Ranges));
-            Console.WriteLine("runTime:" +  (DateTime.UtcNow - startTime));
+            Console.WriteLine("is china ipv4 ip ?" + TestIpv4(ipv4Ranges));
+            Console.WriteLine("runTime:" + (DateTime.UtcNow - startTime));
+            startTime = DateTime.UtcNow;
+            Console.WriteLine("is china ipv6 ip ?" + TestIpv6(ipv6Ranges));
+            Console.WriteLine("runTime:" + (DateTime.UtcNow - startTime));
+
+
+        }
+        static async Task SaveIpRange(List<IpRange> ipRanges, string path)
+        {
+            string text = JsonConvert.SerializeObject(ipRanges);
+            using (var file = File.CreateText(path))
+            {
+                await file.WriteAsync(text);
+            }
+        }
+        static async Task<List<IpRange>> ReadIpRange(string path)
+        {
+            string text;
+            using (var file = File.OpenText(path))
+            {
+                text = await file.ReadToEndAsync();
+            }
+            return JsonConvert.DeserializeObject<List<IpRange>>(text);
         }
         static bool TestIpv4(List<IpRange> ipRanges)
         {
@@ -112,8 +136,8 @@ namespace IpSearchDemo
                     throw new InvalidOperationException("ipv4 error ip range");
                 var ipRange = new IpRange
                 {
-                     Address = keyVal[0],
-                     PrefixLength = Convert.ToInt32(keyVal[1])
+                    Address = keyVal[0],
+                    PrefixLength = Convert.ToInt32(keyVal[1])
                 };
                 ipv4Ranges.Add(ipRange);
             }
