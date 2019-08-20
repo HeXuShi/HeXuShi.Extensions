@@ -18,3 +18,7 @@ src/HeXuShi.Extensions.NoWWW/obj/
 /sample/WebSample/obj
 /demo/IpSearchDemo/obj
 /demo/IpSearchDemo/bin/Debug/netcoreapp2.2
+/sample/TestChinaIp/bin/Debug/netcoreapp2.2
+/sample/TestChinaIp/obj
+/src/HeXuShi.Extensions.IsChinaIp/bin
+/src/HeXuShi.Extensions.IsChinaIp/obj
