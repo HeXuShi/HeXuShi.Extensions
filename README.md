@@ -33,7 +33,8 @@ Console.WriteLine("ipv4 test:" + IsChinaIp.VerifyIPv4("183.192.62.65"));
 Console.WriteLine("ipv6 test:" + IsChinaIp.VerifyIPv6("2400:da00::6666"));
 ```
 
-run test result:
+[run test result](https://github.com/HeXuShi/HeXuShi.Extensions/blob/master/isChinaIp_runTestResult.md) :
+
 49) ipv4 test:True
 runTime:00:00:00.1628871
 49) ipv6 test:True
