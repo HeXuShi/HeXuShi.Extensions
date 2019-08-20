@@ -21,8 +21,12 @@ namespace HeXuShi.Extensions
         {
             return JsonConvert.DeserializeObject<List<IpRange>>(text);
         }
+        private static bool isSetup = false;
         public static void Setup()
         {
+            if (isSetup)
+                return;
+            isSetup = true;
             var ipv4Text = System.Text.Encoding.UTF8.GetString(HeXuShi.Extensions.Properties.Resources.ipv4_cn_zone);
             var ipv6Text = System.Text.Encoding.UTF8.GetString(HeXuShi.Extensions.Properties.Resources.ipv6_cn_zone);
             ipv4Ranges = ReadIpRange(ipv4Text);
