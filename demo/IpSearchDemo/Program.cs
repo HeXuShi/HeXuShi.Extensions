@@ -7,6 +7,9 @@ using System.Net;
 /*
 compare IP address range in C#?
 https://stackoverflow.com/questions/10525531/how-to-compare-ip-address-range-in-c
+
+download link:
+https://github.com/HeXuShi/HeXuShi.Extensions/tree/master/database
  */
 namespace IpSearchDemo
 {
@@ -24,13 +27,6 @@ namespace IpSearchDemo
             Console.WriteLine("Hello World!");
             ReadDataBase().Wait();
         }
-        /*
-         IP2Location™ LITE IP-COUNTRY Database
-        https://lite.ip2location.com/database/ip-country
-
-        download link:
-        https://download.ip2location.com/lite/
-       */
         static async Task ReadDataBase()
         {
             const string ipv4File = "ipv4.cn.zone.txt";
@@ -77,11 +73,6 @@ namespace IpSearchDemo
                     return true;
             }
             return false;
-        }
-        static byte[] IpToByte(string ip)
-        {
-            return IPAddress.Parse(ip).GetAddressBytes();
-            //return BitConverter.ToUInt32(IPAddress.Parse(ip).GetAddressBytes().Reverse().ToArray(), 0);
         }
         public static bool CompareIp(byte[] addressRange, int prefixLength, byte[] address)
         {
