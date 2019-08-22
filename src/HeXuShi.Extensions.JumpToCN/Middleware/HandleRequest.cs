@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HeXuShi.Extensions.Middleware
 {
-    internal class HandleRequest
+    public class HandleRequest
     {
         private JumpOption _option;
         private string _first;

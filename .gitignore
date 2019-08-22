@@ -24,3 +24,5 @@ src/HeXuShi.Extensions.NoWWW/obj/
 /src/HeXuShi.Extensions.IsChinaIp/obj
 /sample/WebSample/bin/Release/netcoreapp2.2
 /sample/WebSample/Properties/PublishProfiles/Default Settings.pubxml
+/Tests/JumpToCNTests/bin/Debug/netcoreapp2.2
+/Tests/JumpToCNTests/obj
