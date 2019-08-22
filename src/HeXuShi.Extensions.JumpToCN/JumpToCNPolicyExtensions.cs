@@ -12,7 +12,19 @@ namespace HeXuShi.Extensions
             {
                 throw new ArgumentNullException(nameof(app));
             }
-            app.UseMiddleware<JumpToCNMiddleware>(noCNSuffix ?? string.Empty);
+            if(noCNSuffix == null)
+                app.UseMiddleware<JumpToCNMiddleware>(".cn", string.Empty, JumpOption.OnlyTo_SpecSuffix);
+            else
+                app.UseMiddleware<JumpToCNMiddleware>(".cn", noCNSuffix, JumpOption.SuffixTo_SpecSuffix);
+            return app;
+        }
+        public static IApplicationBuilder ComplexJumpToCN(this IApplicationBuilder app, string first, string second, JumpOption option)
+        {
+            if (app == null)
+            {
+                throw new ArgumentNullException(nameof(app));
+            }
+            app.UseMiddleware<JumpToCNMiddleware>(first, second, option);
             return app;
         }
     }

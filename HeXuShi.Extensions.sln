@@ -15,11 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSample", "sample\WebSamp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{A633B722-1F9E-493E-9473-4CB6BD220788}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpSearchDemo", "demo\IpSearchDemo\IpSearchDemo.csproj", "{DFFFEB0E-1082-4E51-A78A-D9BFECDA847B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IpSearchDemo", "demo\IpSearchDemo\IpSearchDemo.csproj", "{DFFFEB0E-1082-4E51-A78A-D9BFECDA847B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeXuShi.Extensions.IsChinaIp", "src\HeXuShi.Extensions.IsChinaIp\HeXuShi.Extensions.IsChinaIp.csproj", "{95CD1BE9-3FA5-4EB8-9527-73AC9492E74F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeXuShi.Extensions.IsChinaIp", "src\HeXuShi.Extensions.IsChinaIp\HeXuShi.Extensions.IsChinaIp.csproj", "{95CD1BE9-3FA5-4EB8-9527-73AC9492E74F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestChinaIp", "sample\TestChinaIp\TestChinaIp.csproj", "{A86DAC6D-3EA7-485F-B83A-8355F8B31F8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestChinaIp", "sample\TestChinaIp\TestChinaIp.csproj", "{A86DAC6D-3EA7-485F-B83A-8355F8B31F8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DAE97445-BF2C-46C8-ACF7-EC0773FBBED6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
