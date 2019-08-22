@@ -4,9 +4,6 @@ using System.Text;
 
 namespace HeXuShi.Extensions
 {
-    //JumpToCNState
-    //ToCNState
-    //JumpToState
     public enum JumpOption
     {
         OnlyTo_SpecSuffix,//Only jump to specify suffix
