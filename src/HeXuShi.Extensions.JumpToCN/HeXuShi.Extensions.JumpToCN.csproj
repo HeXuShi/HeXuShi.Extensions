@@ -15,7 +15,7 @@
     <RepositoryType>open source</RepositoryType>
     <PackageTags>web http cn china Middleware</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Description>change xx.com or xx.anything to xx.cn,help you jump to cn(china) domain suffix.</Description>
+    <Description>When you use China mainland ip access, change xx.com or xx.anything to xx.cn,help you jump to cn(china) domain suffix.</Description>
     <Copyright>Copyright 2019</Copyright>
     <RootNamespace>HeXuShi.Extensions</RootNamespace>
     <PackageReleaseNotes>add complex interfaces</PackageReleaseNotes>
