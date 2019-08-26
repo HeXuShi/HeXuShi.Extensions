@@ -3,7 +3,7 @@
 
 [Demo site](http://jumptotest.killsb.com)
 
-change xx.com or xx.anything to xx.cn,help you jump to cn(china) domain suffix.
+When you use China mainland ip access, change xx.com or xx.anything to xx.cn,help you jump to cn(china) domain suffix.
 
 
 No longer based on this project https://github.com/lionsoul2014/ip2region/, But still very grateful lionsoul2014
