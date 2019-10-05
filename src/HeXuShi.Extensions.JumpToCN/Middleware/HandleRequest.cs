@@ -49,15 +49,15 @@ namespace HeXuShi.Extensions.Middleware
 
             try
             {
-                IsChinaIp.Setup();
+                IsChinaIpAddress.Setup();
                 bool isChinaIp = false;
                 switch (context.Connection.RemoteIpAddress.AddressFamily)
                 {
                     case System.Net.Sockets.AddressFamily.InterNetwork:
-                        isChinaIp = IsChinaIp.VerifyIPv4(context.Connection.RemoteIpAddress.ToString());
+                        isChinaIp = IsChinaIpAddress.VerifyIPv4(context.Connection.RemoteIpAddress.ToString());
                         break;
                     case System.Net.Sockets.AddressFamily.InterNetworkV6:
-                        isChinaIp = IsChinaIp.VerifyIPv6(context.Connection.RemoteIpAddress.ToString());
+                        isChinaIp = IsChinaIpAddress.VerifyIPv6(context.Connection.RemoteIpAddress.ToString());
                         break;
                     default:
                         return result;
@@ -85,15 +85,15 @@ namespace HeXuShi.Extensions.Middleware
 
             try
             {
-                IsChinaIp.Setup();
+                IsChinaIpAddress.Setup();
                 bool isChinaIp = false;
                 switch (context.Connection.RemoteIpAddress.AddressFamily)
                 {
                     case System.Net.Sockets.AddressFamily.InterNetwork:
-                        isChinaIp = IsChinaIp.VerifyIPv4(context.Connection.RemoteIpAddress.ToString());
+                        isChinaIp = IsChinaIpAddress.VerifyIPv4(context.Connection.RemoteIpAddress.ToString());
                         break;
                     case System.Net.Sockets.AddressFamily.InterNetworkV6:
-                        isChinaIp = IsChinaIp.VerifyIPv6(context.Connection.RemoteIpAddress.ToString());
+                        isChinaIp = IsChinaIpAddress.VerifyIPv6(context.Connection.RemoteIpAddress.ToString());
                         break;
                     default:
                         return result;
@@ -121,15 +121,15 @@ namespace HeXuShi.Extensions.Middleware
 
             try
             {
-                IsChinaIp.Setup();
+                IsChinaIpAddress.Setup();
                 bool isChinaIp = false;
                 switch (context.Connection.RemoteIpAddress.AddressFamily)
                 {
                     case System.Net.Sockets.AddressFamily.InterNetwork:
-                        isChinaIp = IsChinaIp.VerifyIPv4(context.Connection.RemoteIpAddress.ToString());
+                        isChinaIp = IsChinaIpAddress.VerifyIPv4(context.Connection.RemoteIpAddress.ToString());
                         break;
                     case System.Net.Sockets.AddressFamily.InterNetworkV6:
-                        isChinaIp = IsChinaIp.VerifyIPv6(context.Connection.RemoteIpAddress.ToString());
+                        isChinaIp = IsChinaIpAddress.VerifyIPv6(context.Connection.RemoteIpAddress.ToString());
                         break;
                     default:
                         return result;
@@ -162,15 +162,15 @@ namespace HeXuShi.Extensions.Middleware
 
             try
             {
-                IsChinaIp.Setup();
+                IsChinaIpAddress.Setup();
                 bool isChinaIp = false;
                 switch (context.Connection.RemoteIpAddress.AddressFamily)
                 {
                     case System.Net.Sockets.AddressFamily.InterNetwork:
-                        isChinaIp = IsChinaIp.VerifyIPv4(context.Connection.RemoteIpAddress.ToString());
+                        isChinaIp = IsChinaIpAddress.VerifyIPv4(context.Connection.RemoteIpAddress.ToString());
                         break;
                     case System.Net.Sockets.AddressFamily.InterNetworkV6:
-                        isChinaIp = IsChinaIp.VerifyIPv6(context.Connection.RemoteIpAddress.ToString());
+                        isChinaIp = IsChinaIpAddress.VerifyIPv6(context.Connection.RemoteIpAddress.ToString());
                         break;
                     default:
                         return result;

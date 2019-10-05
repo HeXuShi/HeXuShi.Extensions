@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace HeXuShi.Extensions
 {
 
-    public class IsChinaIp
+    public class IsChinaIpAddress
     {
         internal class IpRange
         {

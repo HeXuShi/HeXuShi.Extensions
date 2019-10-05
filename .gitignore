@@ -26,3 +26,11 @@ src/HeXuShi.Extensions.NoWWW/obj/
 /sample/WebSample/Properties/PublishProfiles/Default Settings.pubxml
 /Tests/JumpToCNTests/bin/Debug/netcoreapp2.2
 /Tests/JumpToCNTests/obj
+/sample/TestChinaIp/bin/Debug/netcoreapp3.0
+/sample/WebSample/bin/Debug/netcoreapp3.0
+/sample/WebSample/bin/Release/netcoreapp3.0
+/src/HeXuShi.Extensions.IsChinaIpAddress/bin/Debug
+/src/HeXuShi.Extensions.IsChinaIpAddress/bin/Release
+/src/HeXuShi.Extensions.IsChinaIpAddress/bin/publish
+/src/HeXuShi.Extensions.IsChinaIpAddress/obj
+/Tests/JumpToCNTests/bin/Debug/netcoreapp3.0

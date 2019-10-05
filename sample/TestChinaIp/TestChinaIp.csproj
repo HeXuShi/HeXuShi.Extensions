@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\HeXuShi.Extensions.IsChinaIp\HeXuShi.Extensions.IsChinaIp.csproj" />
+    <ProjectReference Include="..\..\src\HeXuShi.Extensions.IsChinaIpAddress\HeXuShi.Extensions.IsChinaIpAddress.csproj" />
   </ItemGroup>
 
 </Project>
