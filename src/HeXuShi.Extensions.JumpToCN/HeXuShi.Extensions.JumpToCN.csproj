@@ -27,7 +27,7 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="images\35529176.jpg" Pack="true" PackagePath="" />
+    <None Include="images\35529176.jpg" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>

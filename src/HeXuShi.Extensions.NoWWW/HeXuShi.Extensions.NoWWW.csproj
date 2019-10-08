@@ -24,7 +24,7 @@ https://github.com/HeXuShi/HeXuShi.Extensions/blob/master/docs/nowww.md</Descrip
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    <None Include="images\35529176.jpg" Pack="true" PackagePath="" />
+    <None Include="images\35529176.jpg" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
