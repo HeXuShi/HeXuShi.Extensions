@@ -34,3 +34,7 @@ src/HeXuShi.Extensions.NoWWW/obj/
 /src/HeXuShi.Extensions.IsChinaIpAddress/bin/publish
 /src/HeXuShi.Extensions.IsChinaIpAddress/obj
 /Tests/JumpToCNTests/bin/Debug/netcoreapp3.0
+/src/HeXuShi.Extensions.JumpToCom/bin/Debug
+/src/HeXuShi.Extensions.JumpToCom/obj
+/Tests/JumpToComTests/bin/Debug/netcoreapp3.1
+/Tests/JumpToComTests/obj
