@@ -6,7 +6,7 @@ namespace HeXuShi.Extensions
 {
     public static class JumpToComPolicyExtensions
     {
-        public static IApplicationBuilder JumpToCN(this IApplicationBuilder app, string noCNSuffix = null)
+        public static IApplicationBuilder JumpToCom(this IApplicationBuilder app, string noCNSuffix = null)
         {
             if (app == null)
             {
