@@ -25,9 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JumpToCNTests", "Tests\Jump
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeXuShi.Extensions.IsChinaIpAddress", "src\HeXuShi.Extensions.IsChinaIpAddress\HeXuShi.Extensions.IsChinaIpAddress.csproj", "{78E7470A-B4DA-4F7E-AAF0-83015A4A6DC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpToComTests", "Tests\JumpToComTests\JumpToComTests.csproj", "{666B4179-900F-48B6-80A8-248AEE2E51E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JumpToComTests", "Tests\JumpToComTests\JumpToComTests.csproj", "{666B4179-900F-48B6-80A8-248AEE2E51E2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeXuShi.Extensions.JumpToCom", "src\HeXuShi.Extensions.JumpToCom\HeXuShi.Extensions.JumpToCom.csproj", "{048CBCD1-4CD2-438F-BE6A-76C208393375}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeXuShi.Extensions.BlockChina", "src\HeXuShi.Extensions.BlockChina\HeXuShi.Extensions.BlockChina.csproj", "{C5F70EE8-2079-454B-8EFC-1737FC30B986}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockChinaTests", "BlockChinaTests\BlockChinaTests.csproj", "{355902C6-28F5-49D4-8D92-4B9710FEC955}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,14 @@ Global
 		{048CBCD1-4CD2-438F-BE6A-76C208393375}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{048CBCD1-4CD2-438F-BE6A-76C208393375}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{048CBCD1-4CD2-438F-BE6A-76C208393375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F70EE8-2079-454B-8EFC-1737FC30B986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F70EE8-2079-454B-8EFC-1737FC30B986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F70EE8-2079-454B-8EFC-1737FC30B986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F70EE8-2079-454B-8EFC-1737FC30B986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{355902C6-28F5-49D4-8D92-4B9710FEC955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{355902C6-28F5-49D4-8D92-4B9710FEC955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{355902C6-28F5-49D4-8D92-4B9710FEC955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{355902C6-28F5-49D4-8D92-4B9710FEC955}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +97,8 @@ Global
 		{78E7470A-B4DA-4F7E-AAF0-83015A4A6DC4} = {04C20E46-920C-4384-B57E-0D9EA3FFDBA5}
 		{666B4179-900F-48B6-80A8-248AEE2E51E2} = {DAE97445-BF2C-46C8-ACF7-EC0773FBBED6}
 		{048CBCD1-4CD2-438F-BE6A-76C208393375} = {04C20E46-920C-4384-B57E-0D9EA3FFDBA5}
+		{C5F70EE8-2079-454B-8EFC-1737FC30B986} = {04C20E46-920C-4384-B57E-0D9EA3FFDBA5}
+		{355902C6-28F5-49D4-8D92-4B9710FEC955} = {DAE97445-BF2C-46C8-ACF7-EC0773FBBED6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61188532-DD54-4567-B8AD-E0B697DFB6F3}

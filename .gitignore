@@ -38,3 +38,7 @@ src/HeXuShi.Extensions.NoWWW/obj/
 /src/HeXuShi.Extensions.JumpToCom/obj
 /Tests/JumpToComTests/bin/Debug/netcoreapp3.1
 /Tests/JumpToComTests/obj
+/BlockChinaTests/bin/Debug/netcoreapp3.1
+/BlockChinaTests/obj
+/src/HeXuShi.Extensions.BlockChina/bin/Debug/netcoreapp3.1
+/src/HeXuShi.Extensions.BlockChina/obj
