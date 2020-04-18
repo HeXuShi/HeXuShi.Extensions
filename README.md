@@ -246,3 +246,21 @@ I hope that you have not been confused, in the final analysis, just check the su
 
 ### HeXuShi.Extensions.JumpToCN OnlyTo_SpecSuffix
 
+## HeXuShi.Extensions.BlockChina normal api
+
+run:
+
+```csharp
+using HeXuShi.Extensions;
+
+public class Startup
+{
+    ...
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    {
+        ...
+        app.BlockChina();
+        ...
+    }
+}
+```
