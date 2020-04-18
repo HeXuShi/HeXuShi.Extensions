@@ -6,7 +6,7 @@ namespace HeXuShi.Extensions
 {
     public static class BlockChinaPolicyExtensions
     {
-        public static IApplicationBuilder JumpToCom(this IApplicationBuilder app)
+        public static IApplicationBuilder BlockChina(this IApplicationBuilder app)
         {
             if (app == null)
             {
