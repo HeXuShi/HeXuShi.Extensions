@@ -1,10 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>killsb.pfx</AssemblyOriginatorKeyFile>
-    <Version>3.1.0</Version>
+    <Version>3.1.1</Version>
     <Description>Only Block Ip address from China.</Description>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Copyright>Copyright 2020</Copyright>
@@ -13,7 +13,7 @@
     <RepositoryType>open source</RepositoryType>
     <PackageTags>Block China</PackageTags>
     <PackageIcon>35529176.jpg</PackageIcon>
-    <PackageReleaseNotes>Only Block Ip address from China.</PackageReleaseNotes>
+    <PackageReleaseNotes>fix method name error</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
