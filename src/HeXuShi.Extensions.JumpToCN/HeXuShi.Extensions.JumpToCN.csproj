@@ -1,18 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/HeXuShi/HeXuShi.Extensions</PackageProjectUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>killsb.pfx</AssemblyOriginatorKeyFile>
-    <Version>3.0.0</Version>
+    <SignAssembly>True</SignAssembly>
+    <Version>6.0.0</Version>
     <RepositoryUrl>https://github.com/HeXuShi/HeXuShi.Extensions</RepositoryUrl>
     <RepositoryType>open source</RepositoryType>
     <PackageTags>web http cn china Middleware</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>When you use China mainland ip access, change xx.com or xx.anything to xx.cn,help you jump to cn(china) domain suffix.</Description>
-    <Copyright>Copyright 2019</Copyright>
+    <Copyright>Copyright 2022</Copyright>
     <RootNamespace>HeXuShi.Extensions</RootNamespace>
     <PackageReleaseNotes>add complex interfaces</PackageReleaseNotes>
     <PackageIcon>35529176.jpg</PackageIcon>

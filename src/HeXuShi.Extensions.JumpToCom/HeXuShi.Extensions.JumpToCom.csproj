@@ -1,13 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>killsb.pfx</AssemblyOriginatorKeyFile>
-    <Version>3.1.0</Version>
+    <Version>6.0.0</Version>
     <Description>Set all domain names to .com by default, you can set other domain names</Description>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <Copyright>Copyright 2020</Copyright>
+    <Copyright>Copyright 2022</Copyright>
     <PackageProjectUrl>https://github.com/HeXuShi/HeXuShi.Extensions</PackageProjectUrl>
     <RepositoryUrl>https://github.com/HeXuShi/HeXuShi.Extensions</RepositoryUrl>
     <RepositoryType>open source</RepositoryType>
